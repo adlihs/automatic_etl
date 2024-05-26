@@ -2,14 +2,15 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '* * * * *' # At 00:00 on Monday
+    - cron: '*/10 * * * *' # At 00:00 on Monday
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: install python packages
-       run: |
+      - name: install python packages
+        run: |
           pip install -r requirements.txt
-     - name: execute py script # run main.py
-       run: python main.py
+      - name: execute py script  # run main.py
+        run: python main.py
+
