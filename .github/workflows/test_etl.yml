@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '*/2 * * * *' # At 00:00 on Monday
+    - cron: '* * * * *' # At 00:00 on Monday
 
 jobs:
   run-python-script:
@@ -18,4 +18,4 @@ jobs:
           python-version: '3.10'
       
       - name: Run Python script
-        run: python main.py
+        run: python3 main.py
